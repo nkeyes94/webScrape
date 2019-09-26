@@ -1,5 +1,4 @@
 // * Requiring the modules we'll need
-require("dotenv").config();
 var cheerio = require("cheerio");
 var axios = require("axios");
 var express = require("express");
