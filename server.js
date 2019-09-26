@@ -5,7 +5,7 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var mongoose = require("mongoose");
 var fs = require("fs");
-var db = require("./models");
+var db = require("./models/index");
 
 // * Express config
 var app = express();
