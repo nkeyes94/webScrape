@@ -136,3 +136,5 @@ app.listen(PORT, function(){
         if(err) throw err;
     })
 })
+
+module.exports = app;
