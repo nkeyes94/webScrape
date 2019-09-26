@@ -135,6 +135,4 @@ app.listen(PORT, function(){
     fs.writeFile("./logs/serverLog.txt", "Server successfully started on "+ date + " at " + time, function(err){
         if(err) throw err;
     })
-})
-
-module.exports = app;
+});
