@@ -6,7 +6,9 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var mongoose = require("mongoose");
 var fs = require("fs");
-var db = require("./models/index");
+
+mongoose.Promise = Promise;
+var db = mongoose.connection;
 
 // * Express config
 var app = express();
