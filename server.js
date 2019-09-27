@@ -18,7 +18,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // * Mongo config
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = process.env.MONGODB_URI || "Database: heroku_r9x7k2hr";
 
 // * Connect to the db
 mongoose.connect(MONGODB_URI, function(err, res){
