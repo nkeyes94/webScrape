@@ -73,7 +73,7 @@ mongoose.connect(MONGODB_URI, function(err, res){
     })
     
     // Route for getting all Articles from the db
-    app.get("/articles", function(req, res) {
+    app.get("/Articles", function(req, res) {
         // Grab every document in the Articles collection
         db.Article.find({})
         .then(function(dbArticle) {
@@ -86,7 +86,7 @@ mongoose.connect(MONGODB_URI, function(err, res){
         });
     });
 
-    app.get("/articles/:id", function(req, res) {
+    app.get("/Articles/:id", function(req, res) {
         // Using the id passed in the id parameter, prepare a query that finds the matching one in our db...
         db.Article.findOne({ _id: req.params.id })
           // ..and populate all of the notes associated with it
@@ -102,7 +102,7 @@ mongoose.connect(MONGODB_URI, function(err, res){
       });
 
       // Route for saving/updating an Article's associated Note
-    app.post("/articles/:id", function(req, res) {
+    app.post("/Articles/:id", function(req, res) {
         // Create a new note and pass the req.body to the entry
         db.Note.create(req.body)
         .then(function(dbNote) {
