@@ -7,7 +7,7 @@ var mongoose = require("mongoose");
 var fs = require("fs");
 
 mongoose.Promise = Promise;
-var db = mongoose.connection;
+var db = require("./models");
 
 // * Express config
 var app = express();
